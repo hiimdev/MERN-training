@@ -1,0 +1,65 @@
+
+# Register
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+    "username": "Huyyy",
+    "password": "123"
+}
+
+# Login
+### 
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+    "username": "Huy Can",
+    "password": "123"
+}
+
+# Post
+### 
+POST http://localhost:5000/api/posts
+Content-Type: application/json
+
+{
+    "title": "Angular",
+    "description": "desc",
+    "url": "google.com",
+    "status": "LEARNING"
+}
+
+
+# Check middleware
+### 
+POST http://localhost:5000/api/posts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmJiZmU1NDgyYzQ5NDU1YTRkMDJkMjUiLCJpYXQiOjE2NTY0OTY1NDZ9.A-ErKVcS97FOf_rTlHHrG4B6s-P69MCOeAaggFEahLY
+
+{
+    "title": "testput",
+    "description": "test",
+    "url": "vuejs.org",
+    "status": "LEARNING"
+}
+
+
+# PUT : user Huyyy
+### 
+PUT http://localhost:5000/api/posts/62bc108f3c7ec8175fa20381
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmJiZmU1NDgyYzQ5NDU1YTRkMDJkMjUiLCJpYXQiOjE2NTY0OTY1NDZ9.A-ErKVcS97FOf_rTlHHrG4B6s-P69MCOeAaggFEahLY
+
+{
+    "title": "Angular",
+    "description": "Angular",
+    "url": "angular.org",
+    "status": "LEARNING"
+}
+
+
+# Delete Post
+###
+DELETE http://localhost:5000/api/posts/62bc108f3c7ec8175fa20381
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmJiZmU1NDgyYzQ5NDU1YTRkMDJkMjUiLCJpYXQiOjE2NTY0OTY1NDZ9.A-ErKVcS97FOf_rTlHHrG4B6s-P69MCOeAaggFEahLY
